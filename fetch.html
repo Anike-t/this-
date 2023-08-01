@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advance js</title>
+</head>
+
+<body>
+    <script>
+      fetch("student_data.json")
+      .then(response => response.json())
+      .then((json)=> {
+        console.log(json);
+
+       for(var x in json){
+            var a= `${json[x].name}-${json[x].age}- ${json[x].city} <br>`;
+            document.write(a);
+            }
+
+        
+
+            })
+      .catch( error => document.write("Can't Fecth Data"));
+
+   </script>
+    
+</body>
+</html>
